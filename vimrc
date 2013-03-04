@@ -1,4 +1,3 @@
-
 " VIM configuration file for Alan Jones <alanjones19@gmail.com>
 
 execute pathogen#infect()
@@ -24,21 +23,14 @@ set ruler
 set nowrap            " Disable text wrapping
 set number            " Show numbers on the left of each line
 set cursorline        " Highlight the current line
-"set cursorcolumn      " Highlight the currst column
 set colorcolumn=80
 set nohidden          " Close buffers when the tab is removed
 
 " Set up status bar
-"set statusline=%F%m%r%h%w\ [%{&ff}]\ [%04lx%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 
 " Set up tab bar
 set showtabline=2
-
-" set foldenable
-" set foldmethod=syntax
-" set foldlevel=1
-" let xml_syntax_folding=1  
 
 " Apply colorscheme
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
@@ -60,11 +52,12 @@ let g:Powerline_symbols = 'fancy'
 :nmap k gk
   
 :nmap \l :setlocal number!<CR>
+:nmap \p :setlocal paste! paste?<CR>
 
 :nmap \e :NERDTreeToggle<CR>
 
-:nmap \n :tabnext<CR>
-:nmap \p :tabprevious<CR>
+:nmap \] :tabnext<CR>
+:nmap \[ :tabprevious<CR>
 :nmap \t :tabnew<CR>
 
 :cnoremap <C-a>  <Home>

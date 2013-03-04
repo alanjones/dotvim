@@ -59,6 +59,8 @@ let g:Powerline_symbols = 'fancy'
 :nmap j gj
 :nmap k gk
   
+:nmap \l :setlocal number!<CR>
+
 :nmap \e :NERDTreeToggle<CR>
 
 :nmap \n :tabnext<CR>

@@ -25,7 +25,7 @@ set nowrap            " Disable text wrapping
 set number            " Show numbers on the left of each line
 set cursorline        " Highlight the current line
 "set cursorcolumn      " Highlight the currst column
-"set colorcolumn=80
+set colorcolumn=80
 set nohidden          " Close buffers when the tab is removed
 
 " Set up status bar

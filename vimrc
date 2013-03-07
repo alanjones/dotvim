@@ -1,5 +1,6 @@
 " VIM configuration file for Alan Jones <alanjones19@gmail.com>
 
+runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 filetype plugin on
@@ -47,7 +48,6 @@ let g:Powerline_symbols = 'fancy'
 "    \ }
 
 " Key mappings
-
 :nmap j gj
 :nmap k gk
   
@@ -60,7 +60,9 @@ let g:Powerline_symbols = 'fancy'
 :nmap \[ :tabprevious<CR>
 :nmap \t :tabnew<CR>
 
+" Bash style command mappings
 :cnoremap <C-a>  <Home>
+:cnoremap <C-e>  <End>
 :cnoremap <C-b>  <Left>
 :cnoremap <C-f>  <Right>
 :cnoremap <C-d>  <Delete>
@@ -72,3 +74,34 @@ let g:Powerline_symbols = 'fancy'
 :cnoremap <Esc>d <S-right><Delete>
 :cnoremap <C-g>  <C-c>
 
+" Make the keypad work in iTerm on OSX
+:map <Esc>Oq 1
+:map <Esc>Or 2
+:map <Esc>Os 3
+:map <Esc>Ot 4
+:map <Esc>Ou 5
+:map <Esc>Ov 6
+:map <Esc>Ow 7
+:map <Esc>Ox 8
+:map <Esc>Oy 9
+:map <Esc>Op 0
+:map <Esc>On .
+:map <Esc>OQ /
+:map <Esc>OR *
+:map <kPlus> +
+:map <Esc>OS -
+:map! <Esc>Oq 1
+:map! <Esc>Or 2
+:map! <Esc>Os 3
+:map! <Esc>Ot 4
+:map! <Esc>Ou 5
+:map! <Esc>Ov 6
+:map! <Esc>Ow 7
+:map! <Esc>Ox 8
+:map! <Esc>Oy 9
+:map! <Esc>Op 0
+:map! <Esc>On .
+:map! <Esc>OQ /
+:map! <Esc>OR *
+:map! <kPlus> +
+:map! <Esc>OS -

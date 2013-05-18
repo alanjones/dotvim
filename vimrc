@@ -34,14 +34,15 @@ set laststatus=2
 set showtabline=2
 
 " Apply colorscheme
-if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+if $TERM == "xterm-256color" || $TERM == "screen-256color" 
   set t_Co=256
-  :colorscheme zenburn
+  set background=dark
+  :colorscheme solarized
 endif
 
 let g:Powerline_symbols = 'fancy'
 
-:let g:ctrlp_map = '<Leader>o'
+":let g:ctrlp_map = '<Leader>o'
 "let g:ctrlp_prompt_mappings = {
 "    \ 'AcceptSelection("e")': ['<c-t>'],
 "    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],

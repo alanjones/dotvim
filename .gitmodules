@@ -13,3 +13,15 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/unite.git"]
+	path = bundle/unite.git
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "bundle/vimfiler.vim"]
+	path = bundle/vimfiler.vim
+	url = https://github.com/Shougo/vimfiler.vim.git
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/neomru.vim"]
+	path = bundle/neomru.vim
+	url = https://github.com/Shougo/neomru.vim

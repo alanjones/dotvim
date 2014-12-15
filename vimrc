@@ -42,12 +42,6 @@ endif
 
 let g:Powerline_symbols = 'fancy'
 
-":let g:ctrlp_map = '<Leader>o'
-"let g:ctrlp_prompt_mappings = {
-"    \ 'AcceptSelection("e")': ['<c-t>'],
-"    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-"    \ }
-
 " Key mappings
 :nmap j gj
 :nmap k gk
@@ -55,11 +49,34 @@ let g:Powerline_symbols = 'fancy'
 :nmap \l :setlocal number!<CR>
 :nmap \p :setlocal paste! paste?<CR>
 
-:nmap \e :NERDTreeToggle<CR>
+:nmap \e :VimFilerExplorer<CR>
 
 :nmap \] :tabnext<CR>
 :nmap \[ :tabprevious<CR>
 :nmap \t :tabnew<CR>
+
+" :nnoremap <silent> <C-p> :Unite -auto-resize -toggle file file_mru file_rec/async<cr>
+let g:unite_split_rule = "botright"
+let g:unite_enable_start_insert = 1
+let g:unite_force_overwrite_statusline = 1
+let g:unite_winheight = 10
+
+call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+      \ 'ignore_pattern', join([
+      \ '\.git/',
+      \ ], '\|'))
+
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+
+nnoremap <C-P> :<C-u>Unite file file_mru file_rec/async:!<cr>
+
+autocmd FileType unite call s:unite_settings()
+
+function! s:unite_settings()
+  let b:SuperTabDisabled=1
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+endfunction
 
 " Bash style command mappings
 :cnoremap <C-a>  <Home>

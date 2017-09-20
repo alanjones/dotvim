@@ -34,13 +34,22 @@ set laststatus=2
 set showtabline=2
 
 " Apply colorscheme
-if $TERM == "xterm-256color" || $TERM == "screen-256color" 
+" if $TERM == "xterm-256color" || $TERM == "screen-256color" 
   set t_Co=256
   set background=dark
+  set fillchars+=stl:\ ,stlnc:\
+  set term=xterm-256color
+  set termencoding=utf-8
+  set encoding=utf-8
   :colorscheme solarized
-endif
+" endif
 
-let g:Powerline_symbols = 'fancy'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1 
+let g:rainbow_active = 1
+
+vnoremap <BS> d
 
 " Key mappings
 :nmap j gj

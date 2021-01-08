@@ -31,3 +31,9 @@
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://tpope.io/vim/commentary.git
+[submodule "bundle/gruvbox"]
+	path = bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox.git

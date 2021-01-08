@@ -26,6 +26,7 @@ set number            " Show numbers on the left of each line
 set cursorline        " Highlight the current line
 set colorcolumn=80
 set nohidden          " Close buffers when the tab is removed
+set showmatch         " Show matching brackets
 
 " Set up status bar
 set laststatus=2
@@ -33,19 +34,11 @@ set laststatus=2
 " Set up tab bar
 set showtabline=2
 
-" Apply colorscheme
-" if $TERM == "xterm-256color" || $TERM == "screen-256color" 
-  set t_Co=256
-  set background=dark
-  set fillchars+=stl:\ ,stlnc:\
-  set term=xterm-256color
-  set termencoding=utf-8
-  set encoding=utf-8
-  :colorscheme solarized
-" endif
 
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+set background=dark
+colorscheme gruvbox
+set termguicolors
+
 let g:airline_powerline_fonts = 1 
 let g:rainbow_active = 1
 
